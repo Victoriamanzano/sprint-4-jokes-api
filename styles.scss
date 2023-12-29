@@ -1,0 +1,98 @@
+//Section Colors
+$bg-figure: #AF82FF;
+$face: #f5c834;
+
+//Section Bootstrap
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+//Section Background-SVG
+body {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 130 130' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23AF82FF' d='M44.7,-71.8C56.6,-61.8,64.2,-47.3,68.6,-32.8C73,-18.2,74.2,-3.7,73.3,11.3C72.3,26.2,69,41.6,60.1,52.2C51.1,62.8,36.5,68.5,21.6,72.5C6.6,76.5,-8.5,78.6,-23.9,76.3C-39.2,74.1,-54.6,67.4,-66.4,56.2C-78.2,45,-86.2,29.3,-89.5,12.3C-92.8,-4.6,-91.4,-22.8,-82.8,-36.2C-74.2,-49.5,-58.5,-58,-43.5,-66.6C-28.5,-75.2,-14.3,-83.9,1.1,-85.5C16.4,-87.1,32.7,-81.8,44.7,-71.8Z' transform='translate(75 75) scale(0.5)' /%3E%3C/svg%3E") no-repeat center center;
+
+}
+
+/// Meteo
+#timeMeteo {
+    display: flex;
+    color: #0b2ef5;
+    font-size: 1.1em;
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+// Section h2 & Emogi
+h2 {
+    font-size: 2.5em;
+    color: #000000;
+}
+
+#face-drop {
+    color: $face;
+}
+
+// Section JOKE
+#response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: #000000;
+    font-size: 1.3em;
+    padding: 20px;
+    border-radius: 5px;
+    background-size: 50%;
+}
+
+// Section Score-Buttons
+#btn-score1 {
+    color: $face;
+    background-color: transparent;
+    border-radius: 100px;
+    border-color: black;
+    width: 45px;
+}
+
+#btn-score2 {
+    color: $face;
+    background-color: transparent;
+    border-radius: 100px;
+    border-color: black;
+    width: 45px;
+}
+
+#btn-score3 {
+    color: $face;
+    background-color: transparent;
+    border-radius: 100px;
+    border-color: black;
+    width: 45px;
+}
+
+#btn-score1:hover {
+    background-color: #00b97c;
+    color: #ecb80b;
+}
+
+#btn-score2:hover {
+    background-color: #ac40c7;
+    color: #ecb80b;
+}
+
+#btn-score3:hover {
+    background-color: #f71f1f;
+    color: #ecb80b;
+}
+
+// Section btn-nextjoke
+#btn-nextjoke {
+    background: $face;
+    border-color: #000000;
+    border-radius: 20px;
+}
+
+#btn-nextjoke:hover {
+    background: $bg-figure;
+    color: white;
+}
