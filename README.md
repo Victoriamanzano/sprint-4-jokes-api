@@ -22,7 +22,6 @@ Por último la <strong>maquetación</strong> y estilos para darle <strong>color<
  ## Conicimientos: 
 -  HTML
 -  TypeScript
--  CSS
 -  Sass
 -  Bootstrap
 -  JavaScript
