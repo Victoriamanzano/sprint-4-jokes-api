@@ -1,14 +1,14 @@
-// Definición del tipo de los chistes
+
 const urlServer = 'https://cors-anywhere.herokuapp.com/';
 const urlMeteo = 'https://api.weatherapi.com/v1/current.json?key=3b97a7601c5c4b5a9ce111700232812&q=barcelona&aqi=no';;
 const url = urlServer + urlMeteo;
+
 type Joke = {
   joke: string;
   score?: number;
   date?: string;
 };
 
-// DOM //
 let infoAcudits: Joke[] = [];
 let infoJokes: Joke[] = [];
 
@@ -19,10 +19,8 @@ let response: HTMLElement | null = document.getElementById("response");
 let divContent: HTMLElement | null = document.getElementById("score_btn");
 
 
-// Llama a la API del timeMeteo al iniciar
 meteoApi();
 
-// Función asincrónica que se encarga de hacer una petición a la API de chistes proporcionada por It Academy.
 async function apiJokesDad(): Promise<string> {
 
   try {
@@ -44,7 +42,6 @@ async function apiJokesDad(): Promise<string> {
   }
 }
 
-// Función encargada de mostrar el chiste obtenido desde la API en el elemento HTML de response. También verifica si los botones de puntuación ya están pintados en la pantalla para no repetirlos.
 function showJoke(jokeShow: string): void {
   if (response) {
       response.innerHTML = jokeShow;
@@ -56,7 +53,6 @@ function showJoke(jokeShow: string): void {
   }
 }
 
-// Función que se encarga de generar el contenido HTML para los botones de puntuación de los chistes y asignarles el respectivo evento onclick.
 function showScoreButtons(): void {
   if (divContent) {
       divContent.innerHTML =
@@ -76,13 +72,11 @@ function showScoreButtons(): void {
   }
 }
 
-// Función encargada de guardar el chiste obtenido de la API en un array, además de invocar la función para mostrar este chiste en pantalla.
 function saveInfo(reports: string): void {
   infoAcudits.push({joke: reports});
   showJoke(reports);
 }
 
-// Función que se encarga de asignar una puntuación a un chiste específico. Si el chiste ya tiene una puntuación, esta se sobrescribe con el nuevo valor.
 function fixScore(pressed: number): void {
   let ultimo_chiste: Joke = infoAcudits[infoAcudits.length - 1];
   let intention: Joke = {joke: ultimo_chiste.joke, score: pressed};
@@ -91,7 +85,6 @@ function fixScore(pressed: number): void {
   valuationDate();
 }
 
-// Función que se encarga de asignar la fecha actual a la puntuación de un chiste en particular. Luego imprime en consola el array de chistes puntuados.
 function valuationDate(): Joke[] {
   let fixDate: Joke = infoJokes[infoJokes.length - 1];
   let newDate: string = new Date().toISOString();
@@ -100,7 +93,6 @@ function valuationDate(): Joke[] {
   return infoJokes;
 }
 
-// Función asincrónica que se encarga de hacer una petición a una API para obtener información sobre el clima actual.
 async function meteoApi(): Promise<void> {
   const url: string = 'http://api.weatherapi.com/v1/current.json?key=3b97a7601c5c4b5a9ce111700232812&q=barcelona&aqi=no';
   const options: RequestInit = {
@@ -166,7 +158,6 @@ interface Weatherinfo {
   };
 }
 
-// La respuesta de la API en formato JSON
 const response_info: string = `
 {
   "location": {
@@ -211,10 +202,8 @@ const response_info: string = `
 }
 `;
 
-// Convertir la cadena JSON a un intentioneto TypeScript
 const info: Weatherinfo = JSON.parse(response_info);
 
-// Imprimir algunos reports relevantes
 console.log("Ciudad:", info.location.name);
 console.log("País:", info.location.country);
 console.log("Temperatura actual:", info.current.temp_c, "°C");
