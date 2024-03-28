@@ -5,19 +5,9 @@
 <a href="#" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
 <a href="#" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg" alt="vscode" width="40" height="40"/></a>
 
-#  API - Sprint 4 
+#  API - Jokes 
 
-Este repositorio es el <strong>4º Sprint</strong> del curso de programación de Angular en **IT Academy Barcelona**.
 
-Se nos ha pedido crear una aplicacion web en la que hay que llamar a varias <strong>API</strong>'s para extraer información. 
-
-El <strong>primer ejercicio</strong> hay que extraer datos para que nos lleguen frases de chistes aleatorios.
-
-El <strong>segundo ejercicio</strong> se nos pide llamar a otra <strong>API</strong>, extraer datos del tiempo actual y mostrarlos en pantalla.
-
-El <strong>tercer ejercicio</strong>  hay que adaptar otra <strong>API</strong> para que nos mezcle chistes de otra url con los anteriores y cada vez que se pulse el boton de siguiente, aleatoriamente aparezca un chiste aleatorio.
-
-Por último la <strong>maquetación</strong> y estilos para darle <strong>color</strong>!
 
  ## Conicimientos: 
 -  HTML
